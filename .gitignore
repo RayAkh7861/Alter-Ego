@@ -1,0 +1,4 @@
+# OWNER: Person 1
+node_modules/
+dist/
+.env
