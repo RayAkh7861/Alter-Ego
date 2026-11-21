@@ -1,0 +1,297 @@
+#app[data-screen='page'],
+#app[data-screen='legacy'],
+#app[data-screen='treehouse'] {
+  background: #07070a;
+}
+.play:not(.text-mode) .story {
+  width: min(40vw, 520px);
+}
+.page-card {
+  background-color: #cdbf9e;
+  color: #2b2016;
+}
+.play .story {
+  max-height: 76svh;
+  overflow: auto;
+}
+.answers small,
+.people small {
+  color: #645643;
+}
+.area-name,
+.routes,
+.subtitle,
+.near-label {
+  font-family: VT323, monospace;
+}
+.area-name,
+.routes {
+  position: absolute;
+  color: #e7dfc8;
+  text-shadow: 1px 1px #07070a;
+  pointer-events: none;
+}
+.area-name {
+  right: 1em;
+  bottom: 0.6em;
+  font-size: 1.25rem;
+}
+.routes {
+  inset: auto 1em 2.5em auto;
+  display: none;
+  text-align: right;
+}
+.routes span,
+.map-view small {
+  display: block;
+}
+.subtitle {
+  display: none;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  translate: -50% 0;
+  background: #17141b;
+  color: #e8dfcb;
+  border: 1px solid #776d5c;
+  padding: 0.35em 1em;
+  z-index: 3;
+}
+.collapsed .routes,
+.collapsed .subtitle {
+  display: block;
+}
+.collapsed .story {
+  display: none;
+}
+.era .near-label {
+  color: #f1e5cd;
+  background: #151219;
+  z-index: 2;
+}
+.caught-memory {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #07070a;
+  color: #b9ad94;
+  z-index: 6;
+  font-size: 1.6rem;
+}
+.encounter .stage {
+  scale: 1.035;
+  filter: brightness(0.78);
+}
+.era {
+  overflow: hidden;
+}
+.era .ch-cloak {
+  fill: #c94f4f;
+}
+.era .npc .ch-cloak {
+  fill: #4b5048;
+}
+.era .npc-boyofeight .ch-cloak {
+  fill: #c94f4f;
+}
+[data-hunter] {
+  filter: grayscale(1);
+}
+.era .sign-icon {
+  fill: #f4e6c5;
+}
+.era [data-ghost] {
+  opacity: 0.28;
+  filter: grayscale(1);
+}
+.passing .stage,
+.edge-wipe .stage {
+  opacity: 0.18;
+  transition: opacity 0.18s steps(3);
+}
+.map-view {
+  width: min(580px, 90vw);
+  max-height: 85svh;
+  overflow: auto;
+  margin: auto;
+  z-index: 15;
+}
+.map-view header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.map-view svg {
+  width: 100%;
+  font: 10px monospace;
+}
+.map-view::backdrop {
+  background: #07070acc;
+}
+.weather {
+  pointer-events: none;
+  animation: fog-drift 12s steps(16) infinite alternate;
+}
+.weather.rain,
+.weather.ash {
+  animation: rain-drift 0.8s steps(7) infinite;
+}
+.weather.ash {
+  animation-duration: 3s;
+}
+.flicker {
+  animation: flick steps(1) infinite;
+  transform-origin: 0 0;
+}
+.grain {
+  animation: grain-shift 0.48s steps(1) infinite;
+}
+@keyframes flick {
+  50% {
+    transform: scale(0.95);
+  }
+}
+@keyframes grain-shift {
+  25% {
+    translate: 1px 0;
+  }
+  50% {
+    translate: 0 1px;
+  }
+  75% {
+    translate: -1px -1px;
+  }
+}
+@keyframes fog-drift {
+  to {
+    translate: 18px 0;
+  }
+}
+@keyframes rain-drift {
+  to {
+    translate: -3px 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .weather,
+  .flicker,
+  .grain {
+    animation: none;
+  }
+  .encounter .stage {
+    scale: 1;
+  }
+}
+@media (max-width: 650px) {
+  .play:not(.text-mode) .story {
+    width: 76vw;
+    max-height: 50svh;
+  }
+  .routes {
+    font-size: 0.8rem;
+  }
+  .play .hud {
+    gap: 6px;
+  }
+}
+.alarm {
+  fill: #fff0c0;
+  font: bold 9px monospace;
+  display: none;
+}
+.chasing .alarm {
+  display: block;
+}
+.chasing .npc {
+  animation: startled 0.16s steps(2) 1;
+}
+@keyframes startled {
+  50% {
+    translate: 2px -2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chasing .npc {
+    animation: none;
+  }
+}
+.world,
+.hub,
+.play,
+.legacy {
+  background-image: none;
+}
+.play:not(.text-mode) .story {
+  max-width: 40vw;
+}
+.era .near-label {
+  color: var(--bone);
+  text-shadow:
+    1px 0 var(--void),
+    -1px 0 var(--void),
+    0 1px var(--void);
+}
+.era .ch-cloak {
+  fill: var(--player-cloak);
+}
+.era .ch-skin,
+.era .npc .ch-skin {
+  fill: var(--bone);
+}
+.era .ch-shadow {
+  fill: var(--damp);
+}
+.era .ch-dark {
+  fill: #502e32;
+}
+.era .npc .ch-dark {
+  fill: var(--soot);
+}
+.era .near-label:focus-visible,
+.subtitle:focus-visible {
+  outline: 2px solid var(--lamp);
+}
+.edge-wipe::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--void);
+  animation: edge-pass 0.25s steps(4) both;
+  pointer-events: none;
+}
+@keyframes edge-pass {
+  from {
+    transform: translateX(var(--wipe-direction));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.passing .stage {
+  filter: brightness(0.3);
+}
+@media (prefers-reduced-motion: reduce) {
+  .edge-wipe::after {
+    display: none;
+  }
+}
+.collapsed .hint {
+  display: none;
+}
+.creak {
+  transform-box: fill-box;
+  transform-origin: left;
+  animation: door-open 0.2s steps(2) both;
+}
+@keyframes door-open {
+  to {
+    transform: scaleX(0.2);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .creak {
+    animation: none;
+  }
+}

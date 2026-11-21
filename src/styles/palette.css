@@ -1,0 +1,245 @@
+/* Owner: B */
+
+.th-star {
+  fill: #f3ead2;
+}
+.th-star2 {
+  fill: #e0a63b;
+}
+.th-moon {
+  fill: #f3ead2;
+}
+.th-moon2 {
+  fill: #cfc3a2;
+}
+.th-cl1 {
+  fill: #2b3470;
+}
+.th-cl2 {
+  fill: #5a5f9e;
+}
+.th-cl3 {
+  fill: #9a9dd0;
+}
+.th-b1 {
+  fill: #22150c;
+}
+.th-b2 {
+  fill: #3e2716;
+}
+.th-b3 {
+  fill: #5e3b1f;
+}
+.th-b4 {
+  fill: #86592e;
+}
+.th-l1 {
+  fill: #163a24;
+}
+.th-l2 {
+  fill: #25602f;
+}
+.th-l3 {
+  fill: #3f8a39;
+}
+.th-l4 {
+  fill: #7cbf47;
+}
+.th-m1 {
+  fill: #5f8a34;
+}
+.th-m2 {
+  fill: #a9cf5a;
+}
+.th-g1 {
+  fill: #2f6a2e;
+}
+.th-g2 {
+  fill: #5a9e3f;
+}
+.th-dirt1 {
+  fill: #2e1d10;
+}
+.th-dirt2 {
+  fill: #4d321c;
+}
+.th-rock {
+  fill: #5d5e72;
+}
+.th-st0 {
+  fill: #3a2414;
+}
+.th-st1 {
+  fill: #6b4422;
+}
+.th-st2 {
+  fill: #c08a4a;
+}
+.th-rail {
+  fill: #8a5a2e;
+}
+.th-w1 {
+  fill: #6b3f1f;
+}
+.th-w2 {
+  fill: #93602f;
+}
+.th-w3 {
+  fill: #b8803f;
+}
+.th-r1 {
+  fill: #4a2020;
+}
+.th-r2 {
+  fill: #7a3328;
+}
+.th-r3 {
+  fill: #a5503a;
+}
+.th-ink {
+  fill: #1a1008;
+}
+.th-gold {
+  fill: #e0a63b;
+}
+.th-glow {
+  fill: #ffd77a;
+}
+.th-unlit {
+  fill: #2a2440;
+}
+.th-cloak {
+  fill: #c94f4f;
+}
+.th-skin {
+  fill: #f3c79a;
+}
+.th-hair {
+  fill: #3b2a1a;
+}
+.th-stone {
+  fill: #7b7c8c;
+}
+.th-smoke {
+  fill: #4a5182;
+}
+.th-fly {
+  fill: #ffd77a;
+}
+
+/* Rot: put th-rot-1..3 on the svg root to mirror game.replants */
+.th-rot-1 .th-l4 {
+  fill: #d6c64a;
+}
+.th-rot-1 .th-l3 {
+  fill: #8f9a36;
+}
+.th-rot-1 .th-m2 {
+  fill: #c9b85a;
+}
+.th-rot-2 .th-l4 {
+  fill: #b57a35;
+}
+.th-rot-2 .th-l3 {
+  fill: #8a5a2a;
+}
+.th-rot-2 .th-l2 {
+  fill: #5c4a24;
+}
+.th-rot-2 .th-m1,
+.th-rot-2 .th-m2 {
+  fill: #7a6a3a;
+}
+.th-rot-2 .th-b4 {
+  fill: #5e3b1f;
+}
+.th-rot-2 .th-b3 {
+  fill: #3e2716;
+}
+.th-rot-3 .th-l4,
+.th-rot-3 .th-l3,
+.th-rot-3 .th-m1,
+.th-rot-3 .th-m2 {
+  fill: none;
+}
+.th-rot-3 .th-l2 {
+  fill: #4a3f2c;
+}
+.th-rot-3 .th-l1 {
+  fill: #2c2620;
+}
+.th-rot-3 .th-b4 {
+  fill: #6e6a66;
+}
+.th-rot-3 .th-b3 {
+  fill: #4e4a48;
+}
+.th-rot-3 .th-b2 {
+  fill: #34302e;
+}
+.th-rot-3 .th-gold,
+.th-rot-3 .th-glow {
+  fill: #2a2440;
+}
+
+.th-sky {
+  fill: #0f1a3a;
+}
+.th-dots {
+  fill: #1d2d5c;
+}
+.sc-water {
+  fill: #1f4f7a;
+}
+.sc-wave {
+  fill: #6fa8c9;
+}
+.sc-foam {
+  fill: #cfe3ee;
+}
+.sc-brick {
+  fill: #8a5540;
+}
+.sc-mortar {
+  fill: #6b3f2f;
+}
+.sc-snow {
+  fill: #e8e4da;
+}
+.ch-cloak {
+  fill: #c94f4f;
+}
+.ch-dark {
+  fill: #853c42;
+}
+.ch-skin {
+  fill: #f3c79a;
+}
+.ch-shadow {
+  fill: #be896a;
+}
+.ch-hair {
+  fill: #3b2a1a;
+}
+.ch-grey {
+  fill: #9a9a9a;
+}
+.ch-ink {
+  fill: #1a1008;
+}
+.ch-cane {
+  fill: #986e46;
+}
+:root {
+  --void: #07070a;
+  --deep-shadow: #121016;
+  --soot: #1e1b22;
+  --ash: #3a3640;
+  --damp: #4b5048;
+  --sick-green: #6f7458;
+  --bone: #b9ad94;
+  --lamp: #e7b25a;
+  --lamp-core: #fff0c0;
+  --cold-window: #6f86a6;
+  --player-cloak: #c94f4f;
+}

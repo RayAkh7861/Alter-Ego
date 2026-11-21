@@ -1,0 +1,591 @@
+/* Owner: C */
+.preferences .choice {
+  display: grid;
+  gap: 0;
+}
+.preferences .choice small,
+.pen small {
+  color: #715d47;
+}
+.granted {
+  text-align: center;
+  font-size: 32px;
+  min-width: 220px;
+}
+.hud {
+  align-items: flex-start;
+  gap: 18px;
+  padding: 8px 12px;
+}
+.hud span {
+  display: flex;
+  flex-direction: column;
+  min-width: 24px;
+  align-items: center;
+  gap: 4px;
+}
+.hud small {
+  font-size: 17px;
+  line-height: 1;
+}
+.hud span svg {
+  min-height: 14px;
+}
+.hud span:nth-child(3) {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 46px;
+}
+.hud span:nth-child(3) small {
+  width: 100%;
+  text-align: center;
+}
+.hud .luck-float {
+  position: absolute;
+  left: 4px;
+  bottom: -18px;
+  animation: luck-rise 1.2s steps(9) both;
+}
+@keyframes luck-rise {
+  to {
+    translate: 0 -18px;
+    opacity: 0;
+  }
+}
+.gain,
+.kind {
+  color: #896000;
+}
+.loss,
+.selfish,
+.cruel,
+.bond_down,
+.ripple {
+  color: #9a3434;
+}
+.hud .gain {
+  color: #ffd77a;
+}
+.hud .loss {
+  color: #ef9292;
+}
+.page-card .ripple {
+  font-size: 20px;
+  line-height: 1.05;
+  border-left: 3px solid #a34b42;
+  padding-left: 9px;
+}
+.question {
+  font-size: 24px;
+  font-weight: bold;
+}
+.question.format-yesno {
+  font-size: 32px;
+}
+.answers.format-yesno {
+  display: flex;
+  gap: 16px;
+}
+.answers.format-deep button {
+  padding: 9px 2px;
+}
+.pen,
+.people button {
+  font: inherit;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 7px 0;
+  text-align: left;
+}
+.pen {
+  border-top: 1px solid #b5a385;
+  width: 100%;
+}
+.people {
+  margin: 8px 0;
+}
+.people summary {
+  cursor: pointer;
+}
+.people button {
+  display: block;
+  text-decoration: underline dotted;
+}
+.marks {
+  display: block;
+  border-top: 1px dotted #af9c7d;
+  line-height: 1.15;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.story .actions {
+  scroll-margin: 12px;
+}
+.story {
+  width: min(46vw, 520px);
+}
+.story[hidden] {
+  display: none;
+}
+.text-mode .story {
+  max-height: 84svh;
+}
+.page-card h2 {
+  padding-right: 12px;
+}
+.stamp {
+  float: right;
+  border: 3px double;
+  padding: 2px 6px;
+  font-size: 20px;
+  line-height: 1;
+  transform: rotate(-8deg);
+  animation: stamp-in 0.24s steps(3);
+}
+.great {
+  color: #906310;
+}
+.good {
+  color: #376732;
+}
+.mixed {
+  color: #575685;
+}
+.bad {
+  color: #963d3b;
+}
+@keyframes stamp-in {
+  from {
+    scale: 1.5;
+    translate: 1px 0;
+  }
+  to {
+    scale: 1;
+    translate: 0 0;
+  }
+}
+.ink,
+.forced {
+  font-weight: bold;
+}
+.actions .loading {
+  font-style: italic;
+  color: #775e43;
+}
+.act-card {
+  position: absolute;
+  z-index: 12;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background: #090c13;
+  text-align: center;
+  padding: 3vw;
+}
+.act-card p {
+  max-width: 520px;
+  color: var(--cream);
+  font-size: 30px;
+}
+.act-card h2 {
+  color: var(--gold);
+  font-size: 32px;
+}
+.act-card h3 {
+  font-size: 38px;
+  margin: 0;
+}
+.act-card small {
+  color: #c7b68d;
+}
+.dialogue {
+  position: fixed;
+  inset: auto auto 24px 50%;
+  translate: -50% 0;
+  z-index: 10;
+  width: min(620px, 90vw);
+  max-height: 65vh;
+  margin: 0;
+}
+.dialogue::backdrop {
+  background: #070d2080;
+}
+.dialogue .line {
+  font-size: 26px;
+}
+.dialogue button:not(.choice) {
+  padding: 5px 14px;
+}
+.door-fade {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.lt-kind {
+  fill: #e0a63b;
+}
+.lt-cruel,
+.rot-dark,
+.npc-hat {
+  fill: #211b20;
+}
+.lt-fate {
+  fill: #668bd9;
+}
+.lt-regret {
+  fill: #e16d65;
+}
+.lt-band {
+  fill: #f3ead2;
+  opacity: 0.2;
+}
+.lt-act {
+  font: 5px monospace;
+  fill: #cfc3a2;
+  opacity: 0.7;
+}
+.rot-roof {
+  fill: #a5503a;
+}
+.rot-wall {
+  fill: #b8803f;
+}
+.npc .ch-cloak {
+  fill: var(--coat);
+}
+.npc .ch-dark {
+  fill: color-mix(in srgb, var(--coat) 65%, #211b20);
+}
+.th-rot-3 .npc-gardener {
+  animation: blink 1.6s steps(3) infinite;
+}
+.legacy {
+  min-height: 100svh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: end;
+  padding: 4vh 5vw;
+}
+.legacy-world {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.legacy-world svg {
+  width: min(100vw, 1120px);
+}
+.legacy .page-card {
+  width: min(600px, 90vw);
+  z-index: 1;
+  max-height: 78vh;
+  overflow: auto;
+}
+.legacy .lines p {
+  margin: 0.35em 0;
+}
+.legacy-buildings {
+  border-top: 1px solid #ad9876;
+  margin-top: 12px;
+}
+.legacy-buildings small,
+.panel del {
+  display: block;
+}
+.street-label {
+  font: 5px monospace;
+  fill: #342b30;
+  text-anchor: middle;
+}
+.echo-row {
+  display: flex;
+  gap: 18px;
+}
+.echo-row span {
+  display: grid;
+  justify-items: center;
+  font-size: 18px;
+}
+.echo-row svg {
+  width: 32px;
+  height: 38px;
+  filter: grayscale(1);
+}
+.climb {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--sky);
+}
+.climb svg {
+  width: calc(120px * var(--art-scale, 3));
+  height: calc(152px * var(--art-scale, 3));
+}
+.climb .th-cloak,
+.climb .th-skin,
+.climb .th-hair {
+  animation: climb-stair 1.5s steps(5) both;
+}
+@keyframes climb-stair {
+  from {
+    translate: -5px 8px;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+.decay-price {
+  position: absolute;
+  z-index: 8;
+  background: var(--cream);
+  color: var(--ink);
+  bottom: 18%;
+  padding: 14px 22px;
+}
+.decaying .stage,
+.fall-room .stage {
+  animation: room-shake 0.15s steps(2) 8;
+}
+.decaying .th-glow {
+  animation: gutter 0.6s steps(3) infinite;
+}
+.decaying {
+  animation: price-flash 0.6s 0.9s steps(3);
+}
+@keyframes room-shake {
+  50% {
+    translate: 2px 1px;
+  }
+}
+@keyframes gutter {
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes price-flash {
+  50% {
+    background-color: #61523e;
+  }
+}
+.plank-drop,
+.dust,
+.burst-leaf {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  width: 55px;
+  height: 8px;
+  background: #86592e;
+  animation: drop-board 1s steps(12) both;
+}
+.dust,
+.burst-leaf {
+  width: 6px;
+  height: 6px;
+  background: #ad8248;
+}
+.burst-leaf {
+  top: 20%;
+  animation-duration: 1.8s;
+}
+.fall-floor .stage {
+  animation: floor-drop 0.8s steps(8) forwards;
+}
+.falling .rot-damage,
+.falling .th-r2,
+.falling .th-w2,
+.falling .th-dirt1,
+.falling .th-dirt2 {
+  animation: drop-board 1.8s steps(12) forwards;
+}
+.falling .th-b3 {
+  animation: crack 1s steps(8) forwards;
+}
+.falling .th-l1,
+.falling .th-l2 {
+  opacity: 0.1;
+}
+@keyframes drop-board {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 8px 70vh;
+    rotate: 8deg;
+    opacity: 0;
+  }
+}
+@keyframes floor-drop {
+  to {
+    translate: 0 -35%;
+    opacity: 0;
+  }
+}
+@keyframes crack {
+  to {
+    fill: #181515;
+  }
+}
+.th-rot-1 .page-card {
+  background-image: radial-gradient(
+    ellipse 8px 5px at 96% 91%,
+    #6f503e88 70%,
+    transparent 73%
+  );
+}
+.th-rot-2,
+.th-rot-3 {
+  background-image: radial-gradient(at 10% 80%, #0f1a3a 1px, transparent 4px);
+  background-size: 48px 60px;
+}
+.th-rot-3 .page-card {
+  color: #5a4a3a;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 6px) calc(100% - 18px),
+    calc(100% - 6px) calc(100% - 12px),
+    calc(100% - 13px) calc(100% - 12px),
+    calc(100% - 13px) 100%,
+    0 100%
+  );
+}
+.th-rot-3 .hud span:first-child svg {
+  clip-path: polygon(
+    0 0,
+    53% 0,
+    35% 61%,
+    60% 37%,
+    48% 100%,
+    55% 100%,
+    68% 27%,
+    45% 49%,
+    60% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+.th-rot-3 .stage {
+  filter: saturate(0.55);
+}
+.th-rot-3 .treehouse .stage {
+  animation: sway 2s steps(2) infinite;
+}
+.drip {
+  animation: drip 2s steps(12) infinite;
+}
+.th-rot-1 .treehouse .th-glow:last-child {
+  animation: gutter 2s steps(3) infinite;
+}
+@keyframes sway {
+  50% {
+    translate: var(--unit) 0;
+  }
+}
+@keyframes drip {
+  from {
+    translate: 0 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    translate: 0 78px;
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .act-card,
+  .decaying,
+  .fall-room {
+    animation: none;
+  }
+  .particles,
+  .dust,
+  .plank-drop,
+  .burst-leaf,
+  .drip {
+    display: none;
+  }
+}
+
+.rewrite-card {
+  position: absolute;
+  width: min(510px, 80vw);
+  z-index: 6;
+}
+.th-rot-1 .treehouse .lantern-1,
+.decaying .lantern-2 {
+  animation: gutter 0.35s steps(2) infinite;
+}
+.fall-room .lantern {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: lantern-out 1s steps(6) both;
+}
+.fall-room .lantern-1 {
+  animation-delay: 0.2s;
+}
+.fall-room .lantern-2 {
+  animation-delay: 0.4s;
+}
+.fall-room .lantern-3 {
+  animation-delay: 0.6s;
+}
+@keyframes lantern-out {
+  30% {
+    rotate: 12deg;
+  }
+  60% {
+    rotate: -8deg;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.trunk-crack {
+  animation: open-crack 1.2s steps(30) both;
+}
+@keyframes open-crack {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+.falling .th-w2 {
+  animation-delay: 0.25s;
+}
+.falling .th-w3 {
+  animation: drop-board 1.6s 0.35s steps(10) forwards;
+}
+.falling .th-dirt1,
+.falling .th-dirt2 {
+  animation-delay: 0.7s;
+}
+.place-note {
+  display: block;
+  margin: 6px 0;
+}
+.room-notes {
+  font-size: 20px;
+  text-align: left;
+  max-width: 320px;
+  max-height: 23vh;
+  overflow: auto;
+}
+.room-notes summary {
+  cursor: pointer;
+}
+.room-notes p {
+  margin: 5px 0;
+}
